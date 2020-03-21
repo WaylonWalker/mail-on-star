@@ -21,6 +21,6 @@ jobs:
           username: quadmx08
           password: ${{ secrets.GMAIL_PASS }}
           subject: Your a star ✨
-          body: ${{ github.actor }} just starred your mail-on-star repo!!! ${{ github.repository }} ${{ toJson(github) }}
+          body: ${{ github.actor }} just starred your mail-on-star repo!!! ${{ github.repository }}
           to: ${{ secrets.GMAIL_ADDRESS }}
           from: ${{ secrets.GMAIL_ADDRESS }}
