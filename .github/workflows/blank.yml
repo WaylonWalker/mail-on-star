@@ -23,7 +23,7 @@ jobs:
         # Authenticate as this user to SMTP server
         username: quadmx08
         # Authenticate with this password to SMTP server
-        password: ${{ GMAIL_PASS }}
+        password: ${{ secrets.GMAIL_PASS }}
         # Subject of mail message
         subject: Your a star ✨
         # Body of mail message (might be a filename to read from)
