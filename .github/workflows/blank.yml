@@ -22,5 +22,5 @@ jobs:
         password: ${{ secrets.GMAIL_PASS }}
         subject: Your a star ✨
         body: Someone just starred your mail-on-star repo
-        to: mail-on-star@waylonwalker.com
+        to: quadmx08@gmail.com
         from: quadmx08@gmail.com
