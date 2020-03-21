@@ -13,14 +13,17 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    - name: ✨ Send email, you star
-      uses: dawidd6/action-send-mail@v1.3.0
-      with:
-        server_address: smtp.gmail.com
-        server_port: 465
-        username: quadmx08
-        password: ${{ secrets.GMAIL_PASS }}
-        subject: Your a star ✨
-        body: Someone just starred your mail-on-star repo!!! https://github.com/WaylonWalker/mail-on-star/edit/master ${{ github }}
-        to: ${{ secrets.GMAIL_ADDRESS }}
-        from: ${{ secrets.GMAIL_ADDRESS }}
+      - name: log github
+        run: |
+          echo  ${{ github }}
+      - name: ✨ Send email, you star
+        uses: dawidd6/action-send-mail@v1.3.0
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: quadmx08
+          password: ${{ secrets.GMAIL_PASS }}
+          subject: Your a star ✨
+          body: Someone just starred your mail-on-star repo!!! https://github.com/WaylonWalker/mail-on-star/edit/master
+          to: ${{ secrets.GMAIL_ADDRESS }}
+          from: ${{ secrets.GMAIL_ADDRESS }}
