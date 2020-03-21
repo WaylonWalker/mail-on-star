@@ -13,9 +13,6 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: log github
-        run: |
-          echo  ${{ github }}
       - name: ✨ Send email, you star
         uses: dawidd6/action-send-mail@v1.3.0
         with:
@@ -24,6 +21,6 @@ jobs:
           username: quadmx08
           password: ${{ secrets.GMAIL_PASS }}
           subject: Your a star ✨
-          body: Someone just starred your mail-on-star repo!!! https://github.com/WaylonWalker/mail-on-star/edit/master
+          body: ${{ github.actor }} just starred your mail-on-star repo!!! ${{ github.repository }} ${{ toJson(github) }}
           to: ${{ secrets.GMAIL_ADDRESS }}
           from: ${{ secrets.GMAIL_ADDRESS }}
