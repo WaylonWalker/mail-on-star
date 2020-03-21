@@ -16,19 +16,11 @@ jobs:
     - name: Send email
       uses: dawidd6/action-send-mail@v1.3.0
       with:
-        # SMTP server address
         server_address: smtp.gmail.com
-        # SMTP server port
-        server_port: 467
-        # Authenticate as this user to SMTP server
+        server_port: 465
         username: quadmx08
-        # Authenticate with this password to SMTP server
         password: ${{ secrets.GMAIL_PASS }}
-        # Subject of mail message
         subject: Your a star ✨
-        # Body of mail message (might be a filename to read from)
         body: Someone just starred your mail-on-star repo
-        # Recipients mail addresses (separated with comma)
         to: mail-on-star@waylonwalker.com
-        # Full name of mail sender
         from: quadmx08@gmail.com
