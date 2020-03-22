@@ -14,6 +14,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: ✨ Send email, you star
+        if: github.actor = WaylonWalker
         uses: dawidd6/action-send-mail@v1.3.0
         with:
           server_address: smtp.gmail.com
